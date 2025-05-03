@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox prefHeight="574.0" prefWidth="754.0" stylesheets="@/wheather.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.connecter.WeatherInfoController">
+
+     <HBox prefHeight="78.0" prefWidth="754.0">
+      <Label contentDisplay="CENTER" text="Wheather Info" textAlignment="CENTER" />
+         <Button layoutX="40.0" mnemonicParsing="false" onAction="#onSearchClicked" text="search" />
+         <TextField fx:id="locationField" layoutY="40.0" HBox.hgrow="ALWAYS" />
+     </HBox>
+
+     <ScrollPane fitToHeight="true" fitToWidth="false" hbarPolicy="AS_NEEDED" prefHeight="166.0" prefWidth="754.0" vbarPolicy="NEVER">
+         <FlowPane fx:id="cardContainer"
+                   orientation="HORIZONTAL"
+                   hgap="15" vgap="0"
+                   prefHeight="165.0" prefWidth="696.0"
+                   style="-fx-background-color: rgba(255, 255, 255, 0.6);
+                         -fx-background-radius: 15;
+                         -fx-padding: 10;" />
+     </ScrollPane>
+
+     <LineChart fx:id="weatherChart" prefHeight="290.0" prefWidth="600.0" title="Temperature Forecast" VBox.vgrow="ALWAYS">
+         <xAxis>
+             <CategoryAxis label="X Axis" side="BOTTOM" />
+         </xAxis>
+         <yAxis>
+             <NumberAxis label="Y Axis" side="LEFT">
+            <tickLabelFont>
+               <Font size="12.0" />
+            </tickLabelFont></NumberAxis>
+         </yAxis>
+     </LineChart>
+     
+    </VBox>
