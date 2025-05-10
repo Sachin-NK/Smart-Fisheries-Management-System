@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-
-<?import javafx.scene.control.ListView?>
-<?import javafx.scene.layout.VBox?>
-
-<VBox alignment="TOP_LEFT" spacing="10" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/23.0.1" fx:controller="com.example.connecter.ChatController">
-   <ListView fx:id="chatListView" prefHeight="258.0" prefWidth="600.0" />
-</VBox>
